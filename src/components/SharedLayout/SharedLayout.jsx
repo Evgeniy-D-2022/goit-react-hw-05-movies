@@ -1,23 +1,20 @@
-// Imports
-import { Outlet } from "react-router-dom";
 
-export const SharedLayout = () => {
+import { NavLink, Outlet } from "react-router-dom";
+
+const SharedLayout = () => {
   return (
-    <Container>
-      <Header>
-        <Logo>
-          <span role="img" aria-label="computer icon">
-            💻
-          </span>{" "}
-          GoMerch Store
-        </Logo>
+    <div>
+     <header>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
+          <ul>
+            <li> <NavLink to="/">Home</NavLink></li>
+            <li> <NavLink to="/movies">Movies</NavLink></li>
+          </ul>     
         </nav>
-      </Header>
+      </header>
       <Outlet />
-    </Container>
+    </div>
   );
 };
+
+export default SharedLayout;
