@@ -1,0 +1,12 @@
+.home_container {
+    padding: 20px;
+    background-color: rgba(56, 3, 105, 0.169);
+}
+
+.home_title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: rgb(131, 12, 241);
+    
+}
