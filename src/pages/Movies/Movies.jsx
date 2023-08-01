@@ -11,7 +11,6 @@ const Movies = () => {
     const [page, setPage] = useState(1);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-
     const [searchParams, setSearchParams] = useSearchParams();
 
     const query = searchParams.get('query') ?? '';
@@ -22,13 +21,13 @@ const Movies = () => {
         const getByQuery = async() => {
             setLoading(true);
             try {
-                const { result, totalPage } = await getMovieQuery(query)
-                setMovies(result)
-                setPage(totalPage)
+                const { results, total_results } = await getMovieQuery(query);
+                setMovies(results);
+                setPage(total_results);
+               
                 
             } catch (error) {
-                setError(error.message)
-                
+                setError(error.message)    
             }
             finally {
                 setLoading(false)
@@ -39,8 +38,8 @@ const Movies = () => {
 
     const setParams = query => {
         const params = query !== '' ? { query } : {};
-        setSearchParams(params)
-    }
+        setSearchParams(params);   
+    };
 
     return (
         <div>
@@ -51,8 +50,6 @@ const Movies = () => {
                 <Error errText={'ERROR'}/>
             )}
             {error && (<Error errText={`wrong ${error} TRY AGAIN`}/>)}
-         
-        
         </div>
     );
 };

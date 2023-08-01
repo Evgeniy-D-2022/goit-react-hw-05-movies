@@ -54,7 +54,6 @@ export async function getMovieQuery(query) {
     try {
         const response = await axios.get(url)
         return response.data;
-        // return response.data.results;
     }
     catch (error) {
        console.log(error);

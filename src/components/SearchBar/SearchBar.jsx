@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import css from './SearchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 
-const Searchbar=({ setParams }) => {
+const SearchBar=({ setParams }) => {
   const [query, setQuery] = useState('')
 
   const onChangeInput = e => {
@@ -38,8 +38,8 @@ const Searchbar=({ setParams }) => {
     )
   };
 
-export default Searchbar;
+export default SearchBar;
 
-Searchbar.propType = {
+SearchBar.propType = {
   onSubmit: PropTypes.func,
 };
