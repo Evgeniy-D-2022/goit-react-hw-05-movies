@@ -10,11 +10,11 @@ const MovieList = ({ movies }) => {
           <ul className={css.home_list}>
            {movies.map(movie => {
             return (
-              <li key={movie.id}>
+              <li className={css.movie_item} key={movie.id}>
                 <Link
                 state={{ from: location }}
                 to={`/movies/${movie.id}`}>
-                  <img
+                  <img className={css.movie_img}
                 src={movie.poster_path
                     ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
                     : notfound

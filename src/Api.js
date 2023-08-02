@@ -49,8 +49,8 @@ export async function getMovieReview(id) {
     }
 };
 
-export async function getMovieQuery(query) {
-    const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}`;
+export async function getMovieQuery(query, page) {
+    const url = `${MAIN_URL}/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`;
     try {
         const response = await axios.get(url)
         return response.data;

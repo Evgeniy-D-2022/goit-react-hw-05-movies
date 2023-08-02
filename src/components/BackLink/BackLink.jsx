@@ -1,15 +1,15 @@
 import { HiArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import BackLink from "./BackLink.module.css";
+import css from "./BackLink.module.css";
 
 
- 
-
-export const BackLink = ({ to, children }) => {
+ const BackLink = ({ to, children }) => {
   return (
-    <StyledLink to={to}>
+    <Link className={css.Link} to={to}>
       <HiArrowLeft size="24" />
-      {children}
-    </StyledLink>
+     <span>Back</span>
+    </Link>
   );
 };
+
+export default BackLink;

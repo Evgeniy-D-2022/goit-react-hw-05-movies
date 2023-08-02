@@ -1,0 +1,12 @@
+.movies_container {
+    padding: 20px;
+    background-color: rgba(56, 3, 105, 0.169);
+}
+
+.error_text  {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    color: red;
+}
