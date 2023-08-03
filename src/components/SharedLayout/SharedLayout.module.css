@@ -1,0 +1,42 @@
+.layout_item {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.layout_wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-color: rgba(122, 120, 120, 0.169);
+}
+
+.layout_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.layout_nav {
+    display: flex;
+}
+
+.layout_list {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.layout_link {
+    color: black;
+    transition: color 0.25s;
+    &:hover,
+    &:focus {
+        color: rgb(233, 22, 138);    
+    }
+   
+}

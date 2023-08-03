@@ -5,7 +5,7 @@ import css from "./BackLink.module.css";
 
  const BackLink = ({ to, children }) => {
   return (
-    <Link className={css.Link} to={to}>
+    <Link className={css.link} to={to}>
       <HiArrowLeft size="24" />
      <span>Back</span>
     </Link>

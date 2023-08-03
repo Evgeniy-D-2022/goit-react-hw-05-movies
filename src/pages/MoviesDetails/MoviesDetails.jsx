@@ -9,7 +9,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 const MoviesDetails = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
-    console.log(movie);
+    // console.log(movie);
     const location = useLocation();
     const backLinkHref = useRef(location.state?.from ?? '/');
 
@@ -22,26 +22,27 @@ const MoviesDetails = () => {
     return (
         <main>
             <BackLink to={backLinkHref.current}/>
-            <div>
-                <img src={poster_path && `https://image.tmdb.org/t/p/w300${poster_path}` } alt="Film Poster" />
+            <div className={css.movie_container}>
+                <img className={css.movie_img} src={poster_path && `https://image.tmdb.org/t/p/w300${poster_path}` } alt="Film Poster" />
                 <div>
-                    <p>{title}</p>
+                    <p className={css.moviedetails_title}>{title}</p>
                     {vote_average && (
-            <p>User score: {Math.round(vote_average * 10)}%</p>
+            <p className={css.moviedetails_text}>User score: {Math.round(vote_average * 10)}%</p>
           )}
-          <p><span>Owerview </span>{overview}</p>
-          <p><span>Genres: </span>
+          <p className={css.moviedetails_text}><span>Owerview </span>{overview}</p>
+          <p className={css.moviedetails_text}><span>Genres: </span>
           {genres?.map(({ name }) => name).join(', ')}</p>
+          <p className={css.moviedetails_text}><span>Budget: </span>{budget} USD</p>
                 </div>
             </div>
             <div className={css.info}>
-                <p><span>Budget: </span>{budget} USD</p>
-                <p>Info: </p>
-                <ul>
-                    <li>
+               
+                <p className={css.info_text}>Info: </p>
+                <ul className={css.info_list}>
+                    <li className={css.info_item}>
                         <Link to="cast">Cast</Link>
                     </li>
-                    <li>
+                    <li className={css.info_item}>
                         <Link to="reviews">Review</Link>
                     </li>
                 </ul>

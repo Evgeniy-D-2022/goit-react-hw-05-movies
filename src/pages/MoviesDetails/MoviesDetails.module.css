@@ -1,0 +1,55 @@
+.moviedetails_text {
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.moviedetails_title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.movie_container {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(56, 3, 105, 0.169);
+}
+
+.movie_img {
+    padding: 20px;
+}
+
+.info {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.info_list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.info_text {
+    font-size: 28px;
+    font-weight: 600;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info_item {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: blue;
+
+    :hover {
+        color: rgb(233, 22, 138);
+    }
+}
